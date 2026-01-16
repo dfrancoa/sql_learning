@@ -1,5 +1,30 @@
 SQL information
 
+Commands:
+ 
+SELECT
+ Every SQL query will begin with the SELECT command to fetch data from one or more tables. SELECT is used every time you want to query data from a database and * means all columns.
+
+ Example:
+   SELECT * FROM <table_name>;                 #everything form all columns
+
+   SELECT column1, column2 FROM table_name;    #info just from column1 and 2
+
+AS query
+ Knowing how SELECT works, AS is a keyword in SQL that allows you to rename a column or a table using an alias. the name con be anything you want as long as you put it inside of single quotes.
+
+ Example:
+   SELECT name AS 'Titles' FROM movies;   #Here we renamed the name column as Titles.
+
+ > Although it’s not always necessary, it is considered best practice to surround your aliases with single quotes.
+   - Note that this practice is specific to SQLite. When you work with other RDBMSs, notably PostgreSQL, no quotes or double quotes may be required in place of single quotes.
+   - When using AS, the columns are not being renamed in the table. The aliases only appear in the result.
+
+
+
+
+
+
 Example, table creation and manipulation:
 
 Create table:

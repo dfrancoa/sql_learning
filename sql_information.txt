@@ -1,0 +1,96 @@
+SQL information
+
+Example, table creation and manipulation:
+
+Create table:
+
+CREATE TABLE friends (
+   id INTEGER,
+   name TEXT,
+   birthday DATE
+);
+
+
+Add into row information:
+
+INSERT INTO friends (id, name, birthday) 
+VALUES (1, 'Ororo Munroe', '1940-05-30');
+
+INSERT INTO friends (id, name, birthday) 
+VALUES (2, 'Ivan', '1982-09-09');
+
+INSERT INTO friends (id, name, birthday) 
+VALUES (3, 'Edder', '1985-04-05');
+
+
+Updating a row:
+
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+
+
+Adding a column into table:
+
+ALTER TABLE friends 
+ADD COLUMN email TEXT; 
+
+
+Updating row:
+
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'ivan@codecademy.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'edder@codecademy.com'
+WHERE id = 3;
+
+
+Deleting row 1 from table:
+
+DELETE FROM friends
+WHERE id = 1;
+
+
+Adding more columns to table:
+
+ALTER TABLE friends 
+ADD COLUMN phone TEXT;
+
+ALTER TABLE friends 
+ADD COLUMN instagram TEXT; 
+
+
+
+Updating table with info into new columns that were
+just added:
+
+UPDATE friends
+SET phone = '6621584798'
+WHERE id = 2;
+
+UPDATE friends
+SET phone = '6621581254'
+WHERE id = 3;
+
+UPDATE friends
+SET instagram = 'ivanshugert'
+WHERE id = 2;
+
+UPDATE friends
+SET instagram = 'edderashley'
+WHERE id = 3;
+
+
+View everything from table that was created (frinds):
+
+SELECT * 
+FROM friends;
+
+
+
